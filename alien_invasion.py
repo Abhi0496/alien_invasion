@@ -28,10 +28,9 @@ class AlienInvasion:
 
 
 
-    """This game is controlled by run_game method"""
-    def run_game(self):
-        """Start main loop for the game"""
+        """This game is controlled by run_game method"""
         """It contains an event(an action that user performs while playing the game) loop"""
+    def run_game(self):
         while True:
             """Watch for keyboard and mouse event"""
             """Below for loop is an event loop"""
@@ -42,12 +41,12 @@ class AlienInvasion:
             #redraw the screen during each pass through loop
             #fill() method is used to fill the backgroud color
             self.screen.fill(self.settings.bg_color)
-            
+            self.ship.blitme()
 
             """Make the most recently drawn screen visible"""
             pygame.display.flip()
             self.clock.tick(60) #making loop run 60 times/sec
-            self.ship.blitme()
+            
 
 if __name__ == '__main__':
     """Making game instance"""
